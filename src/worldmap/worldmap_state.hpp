@@ -32,12 +32,9 @@ public:
   WorldMapState(WorldMap& worldmap);
 
   void load_state();
-  /// @param initial If this is an initial save.
-  void save_state(bool initial = false) const;
+  void save_state() const;
 
 private:
-  /// @param initial If this is an initial save.
-  void new_save(bool initial);
   void load_tux(const ssq::Table& table);
   void load_levels(const ssq::Table& table);
   void load_tilemap_visibility(const ssq::Table& table);
